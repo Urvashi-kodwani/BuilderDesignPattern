@@ -13,26 +13,26 @@ import builderdesignpattern.User.UserBuilder;
  */
 
 class User{
-    private String first_name;
-    private String last_name;
+    private String fistName;
+    private String lastName;
     private int age;
     private String address;
     private String phone;
     
     private User(UserBuilder userbuilder){
-        this.first_name=userbuilder.first_name;
-        this.last_name=userbuilder.last_name;
+        this.fistName=userbuilder.fistName;
+        this.lastName=userbuilder.lastName;
         this.age=userbuilder.age;
         this.address=userbuilder.address;
         this.phone=userbuilder.phone;
     }
 
     public String getFirst_name() {
-        return first_name;
+        return fistName;
     }
 
     public String getLast_name() {
-        return last_name;
+        return lastName;
     }
 
     public int getAge() {
@@ -49,28 +49,28 @@ class User{
 
     @Override
     public String toString() {
-        return "User{" + "first_name=" + first_name + ", last_name=" + last_name + ", age=" + age + ", address=" + address + ", phone=" + phone + '}';
+        return "User{" + "fistName=" + fistName + ", lastName=" + lastName + ", age=" + age + ", address=" + address + ", phone=" + phone + '}';
     }
     
     static class UserBuilder{
-        private String first_name;
-        private String last_name;
+        private String fistName;
+        private String lastName;
         private int age;
         private String address;
         private String phone;
 
-        public UserBuilder(String first_name, String last_name) {
-            this.first_name = first_name;
-            this.last_name = last_name;
+        public UserBuilder(String fistName, String lastName) {
+            this.fistName = fistName;
+            this.lastName = lastName;
         }
 
-        public UserBuilder setFirst_name(String first_name) {
-            this.first_name = first_name;
+        public UserBuilder setFirst_name(String fistName) {
+            this.fistName = fistName;
             return this;
         }
 
-        public UserBuilder setLast_name(String last_name) {
-            this.last_name = last_name;
+        public UserBuilder setLast_name(String lastName) {
+            this.lastName = lastName;
             return this;
         }
 
